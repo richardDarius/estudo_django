@@ -37,8 +37,9 @@ Ele também ja tera disponibilidade de rodar um servidor, para isso, mude para o
 ---  python manage.py runserver
     E então o servidor rodara localmente porta 8000, por enquanto nao tem configuração alguma, nem sequer banco de dados, mas ja serve de exemplo.
 
+=======================================
 CRIAÇÃO DO PRIMEIRO APP DO PROJETO:
-
+========================================
 definição:
     Um projeto é uma coleção de configuração e aplicativos para um site específico. Um projeto pode conter vários aplicativos. Um aplicativo pode estar em vários projetos.
 
@@ -48,9 +49,10 @@ definição:
 O aplicativo ja vem com uma estrutura de diretorios criada, para focarmos apenas em codigo.
 
 urls.py (necessario incluir manualmente no diretorio do app do django):
-em projeto/app/urls.py precisamos incluir as views criadas em nosso views.py que serão apresentadas em determinadas rotas com um path(rota,views,name da view).
-ja na raiz, em projetos/urls.py precisamos mapear o roteamento de urls passando a funcção include('app.urls') para incluir urls do app criado anteriormente no projeto,
-isso vai permitir que o app gerencie suas propias rotas.
+
+    no diretorio do app, projeto/app/urls.py precisamos incluir as views criadas em nosso views.py que serão apresentadas em determinadas rotas com um path(rota,views,name da view).
+    ja na raiz, em projetos/urls.py, precisamos mapear o roteamento de urls passando a funcção include('app.urls') para incluir urls do app criado anteriormente,
+    isso vai permitir que o app gerencie suas propias rotas e o projeto reconheça seu proprio sistem ade rotas.
 
 entao a rota sera algo como:
 
